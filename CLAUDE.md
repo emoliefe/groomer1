@@ -1,109 +1,134 @@
-# Pet Shop Website Template — Claude Talimatları
+# Pet Shop Website Template — Claude Instructions
 
-## Proje Nedir?
+## What Is This Project?
 
-Statik bir pet shop / pet kuaför web sitesi template'i. Aynı tasarım farklı müşterilere satılır. Her müşteri için **sadece `client-config.js` değişir** — diğer 3 dosya hiç değişmez.
+A static pet shop / pet grooming website template. The same design is sold to different clients. **Only `client-config.js` changes per client** — the other 3 files never change.
 
-## Dosya Mimarisi
+## File Architecture
 
 ```
 /
-├── index.html          ← HİÇ DEĞİŞMEZ
-├── style.css           ← HİÇ DEĞİŞMEZ
-├── script.js           ← HİÇ DEĞİŞMEZ
-└── client-config.js    ← SADECE BU DEĞİŞİR (her müşteri için yeni)
+├── index.html          ← NEVER CHANGE
+├── style.css           ← NEVER CHANGE
+├── script.js           ← NEVER CHANGE
+└── client-config.js    ← ONLY THIS CHANGES (new file per client)
 ```
 
-## Yeni Müşteri Talebi Geldiğinde
+## Setting Up a New Client
 
-Kullanıcı yeni bir işletme için site istediğinde:
+When a new business asks for a site:
 
-1. **SADECE `client-config.js` dosyasını yaz** — index.html / style.css / script.js'e dokunma
-2. Aşağıdaki şemayı kullan
-3. Commit + push et
+1. **ONLY write `client-config.js`** — do not touch index.html / style.css / script.js
+2. Use the schema below
+3. Commit + push to both the feature branch AND the `gh-pages` branch
 
-## client-config.js Şeması
+## client-config.js Schema
 
 ```js
 window.CLIENT = {
 
-  /* MARKA */
+  /* BRAND */
   name: {
-    sub:  'SEMT ADI',       // Küçük üst yazı (şehir/semt)
-    main: 'İŞLETME ADI',   // Büyük logo metni
+    sub:  'NEIGHBORHOOD / CITY',  // Small top label
+    main: 'BUSINESS NAME',        // Large logo text (auto line-break on space)
   },
-  tagline: 'Pet Kuaför & Petshop',  // Kısa slogan
-  city:    'Şehir',
+  tagline: 'Pet Grooming & Spa',
+  city:    'City',
 
   brand: {
-    primary: '#0000EE',  // Ana renk (buton, link, vurgu)
-    text:    '#58655A',  // Gövde metin rengi
-    dark:    '#111111',  // Başlık rengi
+    primary: '#HEX',   // Buttons, links, accents — pick from themes below
+    text:    '#HEX',   // Body text color
+    dark:    '#111111',
   },
 
-  /* İLETİŞİM */
-  phone:     '05XX XXX XX XX',
-  whatsapp:  '90XXXXXXXXXX',  // Ülke kodu dahil, + ve boşluk yok
-  address:   'Mahalle, Posta Kodu İlçe / Şehir',
-  hours:     ['Pazartesi – Cumartesi: 09:00 – 20:00', 'Pazar: Kapalı'],
-  instagram: 'https://www.instagram.com/kullanici_adi',
-  mapQuery:  'Mahalle+Ilce+Sehir+Turkey',  // Google Maps arama terimi
+  /* CONTACT */
+  phone:     '(XXX) XXX-XXXX',
+  whatsapp:  '1XXXXXXXXXX',   // Country code, no + or spaces (US → 1XXXXXXXXXX, TR → 90XXXXXXXXXX)
+  address:   'Full street address',
+  hours:     ['Monday – Friday: 9:00 AM – 6:00 PM', 'Saturday: 9:00 AM – 5:00 PM', 'Sunday: Closed'],
+  instagram: 'https://www.instagram.com/handle',
+  mapQuery:  'Street+Address+City+State+Country',  // Google Maps search term (spaces → +)
 
-  /* PUANLAMA */
-  rating:      '4.5',
-  reviewCount: 100,
+  /* RATING */
+  rating:      '4.8',
+  reviewCount: 120,
 
-  /* GÖRSELLER */
+  /* IMAGES — use real Unsplash photo IDs */
   heroImage:  'https://images.unsplash.com/photo-XXXX?w=1200&h=1400&fit=crop&q=85',
   aboutImage: 'https://images.unsplash.com/photo-XXXX?w=800&q=85',
 
-  /* HAKKIMIZDA (her öğe ayrı paragraf) */
+  /* ABOUT (each array item = one paragraph) */
   aboutText: [
-    'Birinci paragraf...',
-    'İkinci paragraf...',
+    'First paragraph...',
+    'Second paragraph...',
   ],
 
-  /* STATS ÇUBUĞU (4 öğe) */
+  /* STATS BAR (4 items) */
   stats: [
-    { value: '100+',    label: 'Mutlu Müşteri' },
-    { value: '4.5★',    label: 'Google Puanı' },
-    { value: 'Uzman',   label: 'Grooming' },
-    { value: 'Şehir',   label: 'Semt' },
+    { value: '100+',    label: 'Happy Clients' },
+    { value: '4.8★',    label: 'Google Rating' },
+    { value: 'Expert',  label: 'Grooming' },
+    { value: 'City',    label: 'Neighborhood' },
   ],
 
-  /* HİZMET KARTLARI (4 adet; son kart otomatik vurgu rengi alır) */
+  /* SERVICE CARDS (4 items; last card gets accent color automatically) */
   services: [
-    { icon: '✂️', title: 'Pet Tıraş',        desc: '...', ctaText: 'Randevu Al',   ctaHref: 'tel:+90XXXXXXXXXX' },
-    { icon: '🛁', title: 'Grooming & Bakım', desc: '...', ctaText: 'Randevu Al',   ctaHref: 'tel:+90XXXXXXXXXX' },
-    { icon: '🏪', title: 'PetShop',          desc: '...', ctaText: 'Mağazaya Gel', ctaHref: 'tel:+90XXXXXXXXXX' },
-    { icon: '🐾', title: 'Özel Hizmet',      desc: '...', ctaText: 'Bilgi Al',     ctaHref: 'https://wa.me/90XXXXXXXXXX' },
+    { icon: '✂️', title: 'Pet Haircut',     desc: '...', ctaText: 'Book Now',   ctaHref: 'tel:+1XXXXXXXXXX' },
+    { icon: '🛁', title: 'Grooming & Spa',  desc: '...', ctaText: 'Book Now',   ctaHref: 'tel:+1XXXXXXXXXX' },
+    { icon: '💅', title: 'Nail & Ear Care', desc: '...', ctaText: 'Book Now',   ctaHref: 'tel:+1XXXXXXXXXX' },
+    { icon: '🐾', title: 'Special Care',    desc: '...', ctaText: 'Learn More', ctaHref: 'https://wa.me/1XXXXXXXXXX' },
   ],
 
-  /* GALERİ (5 öğe; layout: 'normal' | 'tall' | 'wide') */
+  /* GALLERY (5 items; layout: 'normal' | 'tall' | 'wide') */
   gallery: [
-    { url: 'https://images.unsplash.com/...', label: 'Kedi Bakımı',    layout: 'tall' },
-    { url: 'https://images.unsplash.com/...', label: 'Grooming',       layout: 'normal' },
-    { url: 'https://images.unsplash.com/...', label: 'Tıraş Sonrası',  layout: 'normal' },
-    { url: 'https://images.unsplash.com/...', label: 'Köpek Bakımı',   layout: 'normal' },
-    { url: 'https://images.unsplash.com/...', label: 'Mutlu Dostlar',  layout: 'wide' },
+    { url: 'https://images.unsplash.com/...', label: 'Cat Grooming', layout: 'tall' },
+    { url: 'https://images.unsplash.com/...', label: 'Puppy Spa',    layout: 'normal' },
+    { url: 'https://images.unsplash.com/...', label: 'After Groom',  layout: 'normal' },
+    { url: 'https://images.unsplash.com/...', label: 'Dog Bath',     layout: 'normal' },
+    { url: 'https://images.unsplash.com/...', label: 'Happy Pets',   layout: 'wide' },
   ],
 
-  /* MÜŞTERİ YORUMLARI */
+  /* REVIEWS */
   reviews: [
-    { text: 'Yorum metni...', author: 'Ad Soyad' },
+    { text: 'Review text...', author: 'First Last' },
   ],
 
 };
 ```
 
-## Mevcut Müşteri: Bahçelievler Pet Park
+## Ready-Made Color Themes
 
-Bu repodaki `client-config.js` Antalya Bahçelievler'deki "Pet Park" işletmesine aittir.
-- Telefon: 0506 036 95 07
-- Adres: Bahçelievler, 07100 Muratpaşa / Antalya
-- Rating: 4.4 (90 yorum)
+| Theme | primary | text | dark |
+|---|---|---|---|
+| Classic Blue | #0000EE | #58655A | #111111 |
+| Natural Green | #2D7D46 | #4A5E4C | #1A2E1F |
+| Warm Orange | #E85D04 | #6B5B4E | #1A1008 |
+| Pink Elegant | #C9184A | #6B4C5A | #1A0010 |
+| Navy Pro | #023E8A | #495867 | #0D1B2A |
+| Royal Purple | #7B2D8B | #5C4A6B | #1A0A2E |
+| Teal Modern | #0A7E8C | #3D6B72 | #051F24 |
+
+## How to Create groomer2, groomer3, … (Future Clients)
+
+**Copy the repo, change only client-config.js. That's it.**
+
+1. Create a new GitHub repo (e.g. `groomer2`)
+2. Copy all 4 files from this repo: `index.html`, `style.css`, `script.js`, `client-config.js`
+3. Enable GitHub Pages → Settings → Pages → Branch: **gh-pages** / root
+4. Give Claude the new client's business info and say: *"Write client-config.js for this business"*
+5. Claude writes `client-config.js`, commits, and pushes to `gh-pages` → site goes live
+
+**The template (index.html, style.css, script.js) is identical across all clients.**
+Never modify those 3 files. Every client difference lives entirely in `client-config.js`.
+
+## Current Client: Petisa Spa
+
+This repo's `client-config.js` belongs to Petisa Spa in Jackson Heights, NY.
+- Phone: (718) 507-7887
+- Address: 72-09 35th Ave Ground Floor, Jackson Heights, NY 11372
+- Rating: 4.6 (152 reviews)
 
 ## Deploy
 
-GitHub Pages: branch `claude/pet-shop-website-design-e5wpK`, root klasör.
-URL: `https://emoliefe.github.io/Deneme/`
+GitHub Pages: `gh-pages` branch, root folder.
+URL: `https://emoliefe.github.io/groomer1/`
