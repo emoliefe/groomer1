@@ -7,100 +7,96 @@ window.CLIENT = {
 
   /* ── MARKA ─────────────────────────────────────────── */
   name: {
-    sub:  'BAHÇELİEVLER',   // Küçük üst yazı (şehir / semt vb.)
-    main: 'PET PARK',        // Büyük logo metni (boşlukta otomatik alt satır)
+    sub:  'JACKSON HEIGHTS',   // Küçük üst yazı (şehir / semt vb.)
+    main: 'PETISA SPA',        // Büyük logo metni (boşlukta otomatik alt satır)
   },
-  tagline: 'Pet Kuaför & Petshop',
-  city:    'Antalya',
+  tagline: 'Pet Grooming & Spa',
+  city:    'New York',
 
   brand: {
-    primary: '#0000EE',  // Butonlar, linkler, vurgu
-    text:    '#58655A',  // Gövde metin
-    dark:    '#111111',  // Başlıklar, koyu alanlar
+    primary: '#C9184A',  // Butonlar, linkler, vurgu
+    text:    '#6B4C5A',  // Gövde metin
+    dark:    '#1A0010',  // Başlıklar, koyu alanlar
   },
 
   /* ── İLETİŞİM ──────────────────────────────────────── */
-  phone:     '0506 036 95 07',
-  whatsapp:  '905060369507',  // Ülke kodu dahil, + ve boşluk yok
-  address:   'Bahçelievler, 07100 Muratpaşa / Antalya',
-  hours:     ['Pazartesi – Cumartesi: 09:00 – 20:00', 'Pazar: Kapalı'],
-  instagram: 'https://www.instagram.com',
-  mapQuery:  'Bahcelievler+Muratpasa+Antalya+Turkey',  // Google Maps arama terimi
+  phone:     '(718) 507-7887',
+  whatsapp:  '17185077887',  // Ülke kodu dahil, + ve boşluk yok
+  address:   '72-09 35th Ave Ground Floor, Jackson Heights, NY 11372',
+  hours:     ['Tuesday – Friday: 8:30 AM – 6:00 PM', 'Saturday – Sunday: 8:30 AM – 5:00 PM', 'Monday: Closed'],
+  instagram: 'https://www.instagram.com/petisaspa',
+  mapQuery:  '72-09+35th+Ave+Jackson+Heights+NY+United+States',  // Google Maps arama terimi
 
   /* ── PUANLAMA ───────────────────────────────────────── */
-  rating:      '4.4',
-  reviewCount: 90,
+  rating:      '4.6',
+  reviewCount: 152,
 
   /* ── GÖRSELLER ─────────────────────────────────────── */
-  heroImage:  'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&h=1400&fit=crop&crop=center&q=85',
-  aboutImage: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=85',
+  heroImage:  'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&h=1400&fit=crop&crop=center&q=85',
+  aboutImage: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=85',
 
   /* ── HAKKIMIZDA METİNLERİ (dizi; her öğe bir paragraf) */
   aboutText: [
-    'Antalya Bahçelievler\'de, evcil ve sokak dostlarımıza bakım hizmetleri ve kaliteli ürünler sunuyoruz. Muhammed Bey liderliğindeki ekibimiz, her hayvana özenli ve sevecen bir yaklaşımla hizmet verir.',
-    'Anestezisiz tıraş konusundaki uzmanlığımızla hassas ve huzursuz hayvanlar bile konfor içinde bakım alıyor. Bize gelen her hayvan sağlıklı, temiz ve mutlu şekilde sahibine kavuşuyor.',
+    'At Petisa Spa in Jackson Heights, we believe every pet deserves to feel pampered and safe. Our experienced groomers are known for their patience and gentle touch — even the most anxious dogs leave here with a wagging tail.',
+    'From precision breed cuts to full spa packages, we deliver premium grooming at honest prices. Visit our cozy salon on 35th Ave and discover why pet parents across Queens trust us with their beloved companions.',
   ],
 
   /* ── İSTATİSTİK ÇUBUĞU (4 öğe) ───────────────────── */
   stats: [
-    { value: '90+',         label: 'Mutlu Müşteri' },
-    { value: '4.4★',        label: 'Google Puanı' },
-    { value: 'Anestezisiz', label: 'Uzman Tıraş' },
-    { value: 'Antalya',     label: 'Bahçelievler' },
+    { value: '152+',     label: 'Happy Clients' },
+    { value: '4.6★',     label: 'Google Rating' },
+    { value: 'Expert',   label: 'Grooming' },
+    { value: 'Queens',   label: 'Jackson Heights' },
   ],
 
   /* ── HİZMETLER (4 adet; son kart otomatik vurgu rengi) */
   services: [
     {
       icon: '✂️',
-      title: 'Pet Tıraş',
-      desc: 'Tüm ırk ve boyutlar için uzman el tıraşı. Hayvanınızın konforu her şeyin önünde.',
-      ctaText: 'Randevu Al',
-      ctaHref: 'tel:+905060369507',
+      title: 'Pet Haircut',
+      desc: 'Breed-specific cuts tailored to your pet\'s coat — precise, clean, and styled to perfection.',
+      ctaText: 'Book Now',
+      ctaHref: 'tel:+17185077887',
     },
     {
       icon: '🛁',
-      title: 'Grooming & Bakım',
-      desc: 'Banyo, fön, tırnak kesimi ve kulak temizliği dahil kapsamlı bakım paketi.',
-      ctaText: 'Randevu Al',
-      ctaHref: 'tel:+905060369507',
+      title: 'Grooming & Spa',
+      desc: 'Full grooming packages including bath, blow-dry, nail trim, ear cleaning, and finishing spritz.',
+      ctaText: 'Book Now',
+      ctaHref: 'tel:+17185077887',
     },
     {
-      icon: '🏪',
-      title: 'PetShop',
-      desc: 'Mama, oyuncak, aksesuar ve evcil dostunuz için ihtiyaç duyacağınız her şey.',
-      ctaText: 'Mağazaya Gel',
-      ctaHref: 'tel:+905060369507',
+      icon: '💅',
+      title: 'Nail & Ear Care',
+      desc: 'Quick, gentle nail trimming and ear cleaning to keep your pet healthy and comfortable between visits.',
+      ctaText: 'Book Now',
+      ctaHref: 'tel:+17185077887',
     },
     {
       icon: '🐾',
-      title: 'Anestezisiz Traş',
-      desc: 'İlaç kullanmadan, güven içinde yapılan özel tıraş — hem güvenli hem stressiz.',
-      ctaText: 'Bilgi Al',
-      ctaHref: 'https://wa.me/905060369507',
+      title: 'Anxiety-Free Care',
+      desc: 'Specialists in nervous and anxious pets — our calm, loving approach keeps every tail wagging throughout.',
+      ctaText: 'Learn More',
+      ctaHref: 'https://wa.me/17185077887',
     },
   ],
 
   /* ── GALERİ (5 öğe; layout: 'normal' | 'tall' | 'wide') */
   gallery: [
-    { url: 'https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=600&q=85', label: 'Kedi Bakımı',    layout: 'tall' },
-    { url: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=85', label: 'Grooming',      layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=85', label: 'Tıraş Sonrası', layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&q=85', label: 'Köpek Bakımı',  layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&q=85', label: 'Mutlu Dostlar', layout: 'wide' },
+    { url: 'https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=600&q=85', label: 'Cat Grooming',  layout: 'tall' },
+    { url: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=85', label: 'Puppy Spa',    layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&q=85', label: 'After Groom',   layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&q=85', label: 'Dog Bath',      layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&q=85', label: 'Happy Pets',    layout: 'wide' },
   ],
 
   /* ── MÜŞTERİ YORUMLARI (yalnızca iyi olanlar) ─────── */
   reviews: [
-    { text: 'Çok teşekkür ederim, elinize emeğinize sağlık. Kızım çok güzel oldu 😻',                                       author: 'Google Yorumu' },
-    { text: '🌟 Stresten uzak, mükemmel bir tıraş deneyimi!',                                                                author: 'Kseniia Kozel' },
-    { text: 'Kedimiz hiç strese girmedi. Gönül rahatlığıyla tavsiye ederim ⭐⭐⭐⭐⭐',                                       author: 'Alper Genç' },
-    { text: '2 tane kedi getirdim, ekibiniz gerçekten çok ilgiliydi ve özenle çalıştılar.',                                   author: 'Nadiia Özcan' },
-    { text: 'Anestezisiz traşla tanıştığım günden beridir Muhammed Bey\'e götürüyorum. Çok memnunum!',                       author: 'Ozan Temur' },
-    { text: 'İlgisi ve anlayışı için çok teşekkür ederim. Hem uygun hem de işini severek ve ustaca yapıyor.',                author: 'ilhan kahraman' },
-    { text: 'Açık ara gittiğimiz en temiz salondu. Sahibi beyefendi çok ilgili ve bilgiliydi.',                               author: 'Beril' },
-    { text: 'İşini çok iyi yapan, düzgün bir pet kuaförü. Anestezi almayan kedimi anestezisiz traş etti.',                   author: 'Nurettin TAYFUN' },
-    { text: 'Devamlı tercih ettiğimiz, güvendiğimiz, profesyonel bir kuaför. Çok memnunuz!',                                 author: 'Taner Karagulle' },
+    { text: 'Amazing service. My dog is usually crying with anxiety when I pick her up from groomers. When I picked her up here she was wagging her tail and happy. Her haircut was so nice also. I\'ll continue to come here from now on.',  author: 'Natalie O.' },
+    { text: 'I love Petisa! My two fur babies can be nervous with strangers but they have been so sweet and patient with them and they love them! Great prices too for grooming.',                                                             author: 'Gigi J.' },
+    { text: 'Great place, great service, and an amazing staff. They truly care about every single pet that comes through that door.',                                                                                                          author: 'Local Guide' },
+    { text: 'The nicest groomer answered all my questions and was so sweet to my dogs. Highly recommend Petisa Spa to anyone in Jackson Heights!',                                                                                            author: 'Queens Pet Parent' },
+    { text: 'My pup comes out looking fabulous every single time. The staff is professional, friendly, and genuinely loves animals.',                                                                                                         author: 'Maria L.' },
   ],
 
 };
